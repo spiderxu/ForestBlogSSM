@@ -69,7 +69,7 @@
 
     <select id="listUser"  resultType="com.ssm.blog.entity.User">
         select
-        <include refid="Base_Colum_List"/>
+        <include refid="Base_Column_List"/>
         from user
         order by `user_status` asc
     </select>

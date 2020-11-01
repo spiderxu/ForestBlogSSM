@@ -15,6 +15,9 @@ public class User {
 
     private Integer userId;
     private String userName;
+    /**
+     * 用户密码，不能为null
+     */
     private String userPass;
     private String userNickname;
     private String userEmail;
