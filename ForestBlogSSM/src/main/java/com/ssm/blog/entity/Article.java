@@ -23,12 +23,19 @@ public class Article implements Serializable {
     private Integer articleCommentCount;
     private Integer articleLikeCount;
     private Integer articleIsComment;
+
+    /**
+     * 文章状态，1 -已发布   0- 草稿
+     */
     private Integer articleStatus;
+
     private Integer articleOrder;
     private Date articleUpdateTime;
     private Date articleCreateTime;
     private String articleSummary;
 
+
+    /**非数据库中字段**/
     private User user;
     private List<Tag> tagList;
     private List<Category> categoryList;

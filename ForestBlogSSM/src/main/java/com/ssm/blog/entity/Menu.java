@@ -16,6 +16,9 @@ public class Menu implements Serializable {
 
     private String menuUrl;
 
+    /**
+     * 1--顶部菜单   2--主体菜单
+     */
     private Integer menuLevel;
 
     private String menuIcon;

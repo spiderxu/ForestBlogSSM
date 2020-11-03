@@ -13,6 +13,7 @@ import java.util.Date;
 public class Comment implements Serializable{
 
     private static final long serialVersionUID = -1038897351672911219L;
+
     private Integer commentId;
 
     private Integer commentPid;

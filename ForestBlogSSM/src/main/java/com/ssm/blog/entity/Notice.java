@@ -7,6 +7,7 @@ import java.util.Date;
 
 /**
  * @author xuzhi
+ * 公告
  */
 @Data
 public class Notice implements Serializable{
@@ -22,6 +23,9 @@ public class Notice implements Serializable{
 
     private Date noticeUpdateTime;
 
+    /**
+     * 1--显示  0--隐藏
+     */
     private Integer noticeStatus;
 
     private Integer noticeOrder;

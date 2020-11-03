@@ -28,6 +28,9 @@ public class Page implements Serializable{
 
     private Integer pageCommentCount;
 
+    /**
+     * 1--显示  0--隐藏
+     */
     private Integer pageStatus;
 
 }

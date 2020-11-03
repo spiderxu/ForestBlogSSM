@@ -4,6 +4,7 @@ import com.ssm.blog.entity.User;
 import com.ssm.blog.mapper.ArticleMapper;
 import com.ssm.blog.mapper.UserMapper;
 import com.ssm.blog.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @date: 2020/11/1 19:15
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Autowired
