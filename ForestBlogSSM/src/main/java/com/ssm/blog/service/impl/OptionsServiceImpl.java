@@ -6,11 +6,13 @@ import com.ssm.blog.service.OptionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 /**
  * @author: xuzhi
  * @date: 2020/11/3 15:50
  */
+@Service
 public class OptionsServiceImpl implements OptionsService {
     @Autowired
     private OptionsMapper optionsMapper;
