@@ -6,6 +6,7 @@ import com.ssm.blog.entity.User;
 import com.ssm.blog.service.ArticleService;
 import com.ssm.blog.service.CommentService;
 import com.ssm.blog.service.UserService;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +18,7 @@ import static com.ssm.blog.util.MyUtils.getIpAddr;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -80,8 +82,8 @@ public class AdminController {
              }
          }
 
-         //问题
-         return username;
+         String result=new JSONObject(map).toString();
+         return result;
 
     }
 
@@ -110,8 +112,21 @@ public class AdminController {
         List<Comment> commentList=commentService.listRecentComment(5);
         model.addAttribute("commentList",commentList);
 
-        return "admin/index";
+        return "Admin/index";
 
+    }
+
+
+    /**
+     * 退出登录
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/admin/logout")
+    public String logout(HttpSession session){
+        session.removeAttribute("user");
+        session.invalidate();
+        return "redirect:/login";
     }
 
 

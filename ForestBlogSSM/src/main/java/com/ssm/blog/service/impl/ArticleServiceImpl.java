@@ -13,10 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author: xuzhi
@@ -180,7 +177,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public PageInfo<Article> pageArticle(Integer pageIndex, Integer pageSize, HashMap<String, Object> criteria) {
+    public PageInfo<Article> pageArticle(Integer pageIndex, Integer pageSize, Map<String, Object> criteria) {
         PageHelper.startPage(pageIndex, pageSize);
         List<Article> articleList = articleMapper.findAll(criteria);
         for (int i = 0; i < articleList.size(); i++) {

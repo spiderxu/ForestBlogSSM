@@ -5,6 +5,7 @@ import com.ssm.blog.entity.Article;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: xuzhi
@@ -105,7 +106,7 @@ public interface ArticleService {
      */
     PageInfo<Article> pageArticle(Integer pageIndex,
                                   Integer pageSize,
-                                  HashMap<String, Object> criteria);
+                                  Map<String, Object> criteria);
 
     /**
      * 文章详情页面显示
